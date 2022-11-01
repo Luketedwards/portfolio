@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row center">
+        <div style="margin: 0 auto;" class="col-sm-12 col-lg-6 center text-center">
+            <div class="center">
+            <h1 class="center text-center">Add a Project</h1>
+            <form class="center text-center" action="{% url 'addProject' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <input  type="submit" value="Add Project" class=" center text-center btn btn-primary">
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
