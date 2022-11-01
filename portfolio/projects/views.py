@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Project, comments
 from .forms import ProjectForm
 from django.views.decorators.csrf import csrf_exempt
+import datetime
 
 # Create your views here.
 @csrf_exempt
@@ -15,6 +16,7 @@ def addProject(request):
             image.save()
     else:
         form = ProjectForm()
+        form.fields['date'].initial = datetime.datetime.now()
     return render(request, 'projects/addProject.html', {'form': form})
 
 

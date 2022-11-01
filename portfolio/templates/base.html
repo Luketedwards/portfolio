@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>iPortfolio Bootstrap Template - Index</title>
+  <title>Luke Edwards - Fullstack Web Developer</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -82,8 +82,8 @@
           {% endif %}
           {% if user.is_authenticated%}
           <li><a href="{% url 'account_logout' %}" class="nav-link"><i class="bx bx-envelope"></i> <span>Sign Out</span></a></li>
-            {% endif %}
           <li><a href="{% url 'addProject' %}" class="nav-link"><i class="bx bx-envelope"></i> <span>Add Project</span></a></li>
+          {% endif %}
         </ul>
       </nav><!-- .nav-menu -->
     </div>

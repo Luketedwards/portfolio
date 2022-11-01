@@ -31,14 +31,15 @@
                 <div class="swiper-slide">
                   <img src="{{project.image.url}}" alt="">
                 </div>
-
+                {% if project.otherImages%}
+                {% for image in project.otherImages%}
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
                 </div>
+                {% endfor%}
+                {% endif %}
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
-                </div>
+                
 
               </div>
               <div class="swiper-pagination"></div>
@@ -49,10 +50,16 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                
-                <li><strong>Project date</strong>: </li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                {% if project.category%}
+                <li class="pt-1 pb-1"><strong>Category</strong>: {{project.category}}</li>
+                {% endif %}
+                {% if project.date%}
+
+                <li class="pt-1 pb-1"><strong>Project date</strong>: {{project.date}}</li>
+                {%endif%}
+                {% if project.url %}
+                <a class="btn btn-primary pt-1 pb-1" target="_blank" href="{{project.url}}">View Project</a>
+                {%endif%}
               </ul>
             </div>
             <div class="portfolio-description">
