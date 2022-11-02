@@ -13,6 +13,28 @@ body {
   color: #272829;
 }
 
+.elem {
+  position: relative;
+  
+}
+
+.to-fade-in {
+  opacity: 0;
+  
+}
+.fade-in {
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 a {
   color: #149ddd;
   text-decoration: none;
