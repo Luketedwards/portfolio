@@ -1,14 +1,16 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block content %}
-  
+
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
   <div class="hero-container" data-aos="fade-in">
     <h1>Luke Edwards</h1>
-    <p class="text-center"><span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span><span class="typed-cursor" aria-hidden="true"></span></p>
-    
+    <p class="text-center"><span class="typed"
+        data-typed-items="Designer, Developer, Freelancer, Photographer"></span><span class="typed-cursor"
+        aria-hidden="true"></span></p>
+
   </div>
 </section><!-- End Hero -->
 
@@ -29,7 +31,8 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 aos-init aos-animate" data-aos="fade-right"> <img src="{% static 'media/Book Photo JPG-min.jpg'%}" class="img-fluid" alt=""></div>
+        <div class="col-lg-4 aos-init aos-animate" data-aos="fade-right"> <img
+            src="{% static 'media/Book Photo JPG-min.jpg'%}" class="img-fluid" alt=""></div>
         <div style="margin: 0 auto;" class="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate  elem to-fade-in  "
           data-aos="fade-left">
           <h2>UI/UX Designer &amp; Full Stack Web Developer.</h2>
@@ -69,7 +72,7 @@
     </div>
   </section><!-- End About Section -->
 
-  
+
   <!-- ======= Skills Section ======= -->
   <section id="skills" class="skills section-bg">
     <div class="container">
@@ -249,7 +252,9 @@
             <h4>Luke Edwards</h4>
             <p><em>Junior web developer with a diploma in full-stack web development from the Code Institute. I am
                 proficient in HTML, CSS, JavaScript, Python and many other libraries and frameworks. I have eight
-                years of experience working in the music industry as a guitarist, author and sole trader. I pride
+                years of experience working in the music industry as a guitarist, author and sole trader, and one year
+                professional experience working at a leading graphic design/ web-development agency in Pembrokeshire. I
+                pride
                 myself on being a valuable team-player with strong communication skills and effective problem-solving
                 abilities. I am enthusiastic about joining the tech industry where I can further grow my skillset,
                 contribute to a team and hone my abilities as a developer.</em></p>
@@ -264,14 +269,14 @@
           <div class="resume-item elem to-fade-in">
             <h4>BA Hons, Popular Music</h4>
             <h5>2015 - 2018</h5>
-            <p><em>Leeds Conservatoire</em></p>
+            <p><em><a href="https://www.leedsconservatoire.ac.uk">Leeds Conservatoire</a>, Leeds</em></p>
             <p>I trained at the prestigious Leeds conservatoire. Modules I undertook include film music, performance,
               composition, arranging, music business and music education.</p>
           </div>
           <div class="resume-item elem to-fade-in">
             <h4>Level 5 Diploma in Full Stack Development</h4>
             <h5>2021 - 2022</h5>
-            <p><em>Code Institute, Dublin </em></p>
+            <p><em><a href="https://codeinstitute.net">Code Institute</a>, Dublin </em></p>
             <p>Intensive one-year long web development course accredited by the University of West Scotland.</p>
           </div>
         </div>
@@ -280,14 +285,15 @@
           <div class="resume-item elem to-fade-in">
             <h4>Web Developer</h4>
             <h5>2021 - Present</h5>
-            <p><em>Freelance</em></p>
+            <p><em><a href="https://www.designmarque.co.uk">Design Marque</a>, Pembrokeshire</em></p>
             <ul>
-              <li>Since beginning my journey into web development, I have spent some time building projects and fixing
-                issues for clients. I also work with an established graphic designer/WordPress builder on various
-                tasks.</li>
-              <li>Examples of work I have done include building contact forms for websites, fixing WordPress issues
+              <li>1-year professional experience working with leading Pembrokeshire based web development/graphic design
+                company, <a href="https://www.designmarque.co.uk">Design Marque</a>.</li>
+              <li>Experience working with both WordPress and HTML, CSS and JavaScript to build client websites and
+                contact forms. </li>
+              <li>Examples of my responsibilities include building contact forms for websites, fixing WordPress issues
                 and bugs, improving existing sites' SEO or performance, running Facebook and Google advertising
-                campaigns, etc. </li>
+                campaigns, creating marketing content for adverts etc.</li>
 
             </ul>
           </div>
@@ -311,7 +317,7 @@
           <div class="resume-item elem to-fade-in">
             <h4>Contributing Music Author</h4>
             <h5>2021 - 2022</h5>
-            <p><em>Acoustic Guitar Magazine</em></p>
+            <p><em><a href="https://acousticguitar.com">Acoustic Guitar Magazine</a>, California</em></p>
             <ul>
               <li>I wrote an extensive article exploring traditional Welsh folk music and Celtic guitar techniques in
                 the context of solo acoustic guitar.</li>
@@ -325,7 +331,7 @@
           <div class="resume-item elem to-fade-in">
             <h4>Author of 'Songs of Wales for Fingerstyle Guitar'</h4>
             <h5>2021 - Present</h5>
-            <p><em>Freelance</em></p>
+            <p><em><a href="https://www.melbay.com">Mel Bay Publications</a>, Michigan</em> - <em>Freelance</em></p>
             <ul>
               <li>I wrote and produced a full-length book for major American publisher 'Mel Bay'. The book consisted
                 of 17 pieces of traditional Welsh folk repertoire which I arranged for solo acoustic guitar.</li>
@@ -372,13 +378,13 @@
           <div class="portfolio-wrap">
             <img src="{{ project.image.url }}" class="img-fluid" alt="{{project.title}}">
             <div class="portfolio-links">
-              <a href="{{ project.image.url }}" data-gallery="portfolioGallery"
-                class="portfolio-lightbox" title="View Image"><i class="bx bx-search-alt-2"></i></a>
+              <a href="{{ project.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="View Image"><i class="bx bx-search-alt-2"></i></a>
               <a href="{% url 'portfolio_details' project.id %}" title="More Details"><i class="bx bxs-pointer"></i></a>
             </div>
             <div class="overlay">
               <h4>{{project.title}}</h4>
-              
+
             </div>
           </div>
         </div>
@@ -473,7 +479,8 @@
               </p>
               <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
               <h3>Sarah Ray</h3>
-              <h4>Ceo &amp; <a href="https://www.designmarque.co.uk/">Design Marque </a> - Graphic Design & Web Development</h4>
+              <h4>Ceo &amp; <a href="https://www.designmarque.co.uk/">Design Marque </a> - Graphic Design & Web
+                Development</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -487,11 +494,12 @@
               </p>
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Michael Smith</h3>
-              <h4>Founder of <a href="https://www.huntforhabit.com/">Hunt for Habit</a> - Personal Training & <a href="https://smittenfoxproductions.com/#top">Smitten Fox </a>- Music Production and Film Scoring</h4>
+              <h4>Founder of <a href="https://www.huntforhabit.com/">Hunt for Habit</a> - Personal Training & <a
+                  href="https://smittenfoxproductions.com/#top">Smitten Fox </a>- Music Production and Film Scoring</h4>
             </div>
           </div><!-- End testimonial item -->
 
-          
+
 
           <div class="swiper-slide">
             <div class="testimonial-item elem to-fade-in" data-aos="fade-up" data-aos-delay="300">
@@ -507,7 +515,7 @@
             </div>
           </div><!-- End testimonial item -->
 
-          
+
 
         </div>
         <div class="swiper-pagination"></div>
