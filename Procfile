@@ -1,1 +1,1 @@
-web: gunicorn portfolio.wsgi:application
+web: gunicorn portfolio-luke-edwards.wsgi:application
