@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-rww!gz9_g8v))=v!en3x#dzh5ak91_yeu-yjwhs-gf5529*jp2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'portfolio-luke-edwards.herokuapp.com', '8000', '5432', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [ 'portfolio-luke-edwards.herokuapp.com','localhost']
 CSRF_TRUSTED_ORIGINS = ['https://8000-luketedwards-portfolio-5u0zo4xtnrj.ws-eu73.gitpod.io']
 CORS_ORIGIN_ALLOW_ALL = True
 
