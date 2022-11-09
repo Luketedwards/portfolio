@@ -89,9 +89,4 @@ $( document ).ready(function() {
     
 });
 
-/* when #contact-form is submitted alert the user */
-$('#contact-form').submit(function() {
-    alert('Thank you for your message. I will get back to you as soon as possible.');
-}
-
 
