@@ -205,3 +205,25 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+if 'DEVELOPMENT' not in os.environ:
+
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp-relay.sendinblue.com'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'scoreemporiumstore@gmail.com'
+    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASS')
+    SENDBLUE_PASSWORD = env('SENDBLUE_PASSWORD')
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_EMAIL_FROM = 'Score Emporium <scoreemporiumstore@gmail.com>'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp-relay.sendinblue.com'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'luketedmusic@gmail.com'
+
+    SENDBLUE_PASSWORD = env('SENDBLUE_PASSWORD')
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_EMAIL_FROM = 'Score Emporium <scoreemporiumstore@gmail.com>'
