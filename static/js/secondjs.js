@@ -32,19 +32,19 @@ $(window).scroll(function() {
         $('.HTML').css({'width':'100%'});
         $('.CSS').css({'width':'90%'});
         $('.JavaScript').css({'width':'75%'});
-        $('.PHP').css({'width':'80%'});
-        $('.WordPress').css({'width':'90%'});
-        $('.Photoshop').css({'width':'55%'});
+        $('.PHP').css({'width':'70%'});
+        $('.WordPress').css({'width':'80%'});
+        $('.Photoshop').css({'width':'80%'});
         $('.React').css({'width':'60%'});
-        $('.Python').css({'width':'50%'});
-        $('.Django').css({'width':'50%'});
-        $('.SQL').css({'width':'50%'});
-        $('.Git').css({'width':'50%'});
-        $('.MongoDB').css({'width':'50%'});
-        $('.Bootstrap').css({'width':'50%'});
-        $('.Amazon').css({'width':'50%'});
-        $('.Google').css({'width':'50%'});
-        $('.Analytics').css({'width':'50%'});
+        $('.Python').css({'width':'80%'});
+        $('.Django').css({'width':'90%'});
+        $('.SQL').css({'width':'70%'});
+        $('.Git').css({'width':'80%'});
+        $('.MongoDB').css({'width':'80%'});
+        $('.Bootstrap').css({'width':'100%'});
+        $('.Amazon').css({'width':'80%'});
+        $('.Google').css({'width':'75%'});
+        $('.Analytics').css({'width':'70%'});
 
         
     } else {
@@ -88,4 +88,10 @@ $( document ).ready(function() {
 
     
 });
+
+/* when #contact-form is submitted alert the user */
+$('#contact-form').submit(function() {
+    alert('Thank you for your message. I will get back to you as soon as possible.');
+}
+
 
