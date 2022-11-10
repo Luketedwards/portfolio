@@ -13,7 +13,7 @@ class Project(models.Model):
     image3 = models.ImageField(null=True, blank=True,)
     image4 = models.ImageField(null=True, blank=True,)
     category = models.CharField(max_length=100, blank=True)
-    skills = models.CharField(max_length=500, blank=True)
+    skills = models.CharField(max_length=500, blank=True, null=True, default='')
     type = models.ForeignKey('typeOfApp', null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
