@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Project, comments, typeOfApp
+from .models import Project,  typeOfApp
 
 class typeAdmin(admin.ModelAdmin):
     list_display = (
@@ -18,13 +18,13 @@ class ProjectAdmin(admin.ModelAdmin):
         'url',
         'date',
         'category',
-        'skills',
+        # 'skills',
         'type',
     )
 
     ordering = ('title',)
 
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(comments)
+# admin.site.register(comments)
 admin.site.register(typeOfApp, typeAdmin)
 

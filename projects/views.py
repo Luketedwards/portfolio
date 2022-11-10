@@ -13,7 +13,7 @@ def addProject(request):
             form.save()
             
             image = form.cleaned_data.get('image')
-            image.save()
+            
             return redirect('home')
     else:
         form = ProjectForm()
