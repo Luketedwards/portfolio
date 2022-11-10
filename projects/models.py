@@ -13,7 +13,8 @@ class Project(models.Model):
     image3 = models.ImageField(null=True, blank=True,)
     image4 = models.ImageField(null=True, blank=True,)
     category = models.CharField(max_length=100, blank=True)
-
+    skills = models.CharField(max_length=500, blank=True)
+    type = models.ForeignKey('typeOfApp', null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.title
@@ -27,3 +28,10 @@ class comments(models.Model):
 
     def __str__(self):
         return self.name        
+
+
+class typeOfApp(models.Model):
+    type = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.typeOfApp

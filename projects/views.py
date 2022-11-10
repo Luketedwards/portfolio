@@ -11,9 +11,10 @@ def addProject(request):
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            
             image = form.cleaned_data.get('image')
             image.save()
+            return redirect('home')
     else:
         form = ProjectForm()
         form.fields['date'].initial = datetime.datetime.now()
@@ -23,9 +24,10 @@ def addProject(request):
 def portfolio_details(request, pk):
     """ A view to return the index page """
     project = Project.objects.get(pk=pk)
+    skillslist = project.skills.split(',')
     
     context = {
         'project': project,
-        
+        'skillslist': skillslist,
     }
     return render(request, 'projects/portfolio-details.html', context)
