@@ -9,7 +9,22 @@ class typeAdmin(admin.ModelAdmin):
         'type',
     )
 
-admin.site.register(Project)
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'description',
+        'image',
+        'url',
+        'date',
+        'category',
+        'skills',
+        'type',
+    )
+
+    ordering = ('title',)
+
+admin.site.register(Project, ProjectAdmin)
 admin.site.register(comments)
 admin.site.register(typeOfApp, typeAdmin)
 
