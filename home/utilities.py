@@ -9,11 +9,8 @@ from django.template.loader import render_to_string
 
 def send_email(form_data):
     
-    from_email = settings.DEFAULT_EMAIL_FROM
-   
-    
-
-    subject = form_data['subject']
+    from_email = form_data['email']
+    subject = "NEW CONTACT FROM PORTFOLIO - " + form_data['subject']
     sender = form_data['email']
     reply_to = {
         "name": form_data['name'],

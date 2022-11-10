@@ -69,6 +69,7 @@
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="{% url 'home'%}" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          {% if request.get_full_path == "/" %}
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
@@ -76,12 +77,13 @@
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
           {% if not user.is_authenticated%}
-          <li><a href="{% url 'account_login' %}" class="nav-link"><i class="bx bx-envelope"></i> <span>Sign In</span></a></li>
+          <li><a href="{% url 'account_login' %}" class="nav-link"><i class='bx bxs-log-in-circle'></i> <span>Sign In</span></a></li>
           {% endif %}
           {% if user.is_authenticated%}
-          <li><a href="{% url 'account_logout' %}" class="nav-link"><i class="bx bx-envelope"></i> <span>Sign Out</span></a></li>
-          <li><a href="{% url 'addProject' %}" class="nav-link"><i class="bx bx-envelope"></i> <span>Add Project</span></a></li>
+          <li><a href="{% url 'account_logout' %}" class="nav-link"><i class='bx bxs-log-out-circle' ></i> <span>Sign Out</span></a></li>
+          <li><a href="{% url 'addProject' %}" class="nav-link"><i class='bx bxs-add-to-queue' ></i> <span>Add Project</span></a></li>
           {% endif %}
+          {%endif%}
         </ul>
       </nav><!-- .nav-menu -->
     </div>
