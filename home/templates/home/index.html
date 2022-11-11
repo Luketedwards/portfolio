@@ -393,7 +393,7 @@
         {% if projects|length > 0 %}
         {% for project in projects %}
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-{{project.type}}">
           <div class="portfolio-wrap">
             <img src="{{ project.image.url }}" class="img-fluid" alt="{{project.title}}">
             <div class="portfolio-links">
