@@ -34,4 +34,4 @@ class typeOfApp(models.Model):
     type = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.typeOfApp
+        return self.type
