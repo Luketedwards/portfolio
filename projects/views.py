@@ -25,6 +25,7 @@ def portfolio_details(request, pk):
     """ A view to return the index page """
     project = Project.objects.get(pk=pk)
     skillslist = project.skills.split(',')
+    skillslist.remove(skillslist[len(skillslist)-1])
     
     context = {
         'project': project,
