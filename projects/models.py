@@ -5,7 +5,7 @@ import datetime
 
 class Project(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField(max_length=2000)
+    description = models.CharField(max_length=1000)
     image = models.ImageField(null=True, blank=True,)
     url = models.URLField(blank=True)
     date = models.DateTimeField(default='2012-06-30T20:00:00.000000000-0400', blank=True)
