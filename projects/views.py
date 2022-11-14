@@ -7,18 +7,21 @@ import datetime
 # Create your views here.
 @csrf_exempt
 def addProject(request):
-    if request.method == 'POST':
-        form = ProjectForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            
-            image = form.cleaned_data.get('image')
-            
-            return redirect('home')
+    if request.user.username == 'luketedwards':
+        if request.method == 'POST':
+            form = ProjectForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                
+                image = form.cleaned_data.get('image')
+                
+                return redirect('home')
+        else:
+            form = ProjectForm()
+            form.fields['date'].initial = datetime.datetime.now()
+        return render(request, 'projects/addProject.html', {'form': form})
     else:
-        form = ProjectForm()
-        form.fields['date'].initial = datetime.datetime.now()
-    return render(request, 'projects/addProject.html', {'form': form})
+        return redirect('home')    
 
 
 def portfolio_details(request, pk):
